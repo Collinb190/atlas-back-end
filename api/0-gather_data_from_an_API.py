@@ -16,6 +16,7 @@ def get_user_name(user_id):
     else:
         return 'Unknown'
 
+
 def todo_progress(employee_id):
     """ Displays the todo list progress. """
     responce = requests.get(
@@ -31,9 +32,13 @@ def todo_progress(employee_id):
     employee_name = get_user_name(employee_id)
 
     # print the employees todo list progress.
-    print(f"Employee {employee_name} is done with tasks ({num_completed}/{total_tasks}):")
+    print(
+        f"Employee {employee_name} is done with tasks "
+        f"({num_completed}/{total_tasks}):"
+    )
     for task in completed_tasks:
         print(f"\t{task['title']}")
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
