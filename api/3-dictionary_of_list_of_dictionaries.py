@@ -47,7 +47,7 @@ def todo_progress_all():
         else:
             print(f"Failed to get data for employee ID: {employee_id}")
 
-    export_to_json(employee_id, todos)
+    export_to_json(all_data)
 
     completed_tasks = [todo for todo in todos if todo['completed']]
     num_completed = len(completed_tasks)
