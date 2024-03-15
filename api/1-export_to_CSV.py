@@ -26,7 +26,7 @@ def export_to_csv(employee_id, todos):
     with open(file_name, mode='w', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow(
-            ["USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"]
+            ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
         )
         for todo in todos:
             writer.writerow(
