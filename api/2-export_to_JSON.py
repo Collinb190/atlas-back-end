@@ -27,7 +27,7 @@ def export_to_json(employee_id, todos):
                 "task": todo['title'],
                 "completed": todo['completed'],
                 "username": user_name
-            } 
+            }
             for todo in todos
         ]
     }
