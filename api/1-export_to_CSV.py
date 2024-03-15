@@ -13,7 +13,7 @@ def get_user_name(user_id):
         f'https://jsonplaceholder.typicode.com/users/{user_id}'
     )
     if responce.status_code == 200:
-        return responce.json().get('name', 'Unknown')
+        return responce.json().get('username', 'Unknown')
     else:
         return 'Unknown'
 
